@@ -1,3 +1,6 @@
+const app = getApp()
+
+
 Page({
 
   data: {
@@ -104,6 +107,7 @@ Page({
             let result = JSON.parse(res.data)
             that.setData(result)
             that.setData({fetched: true})
+            app.globalData.connectionLogs.unshift(res.header.Date + ": Status " + res.statusCode)
           },
           fail(res) {
             console.log("upload failure")
