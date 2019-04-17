@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="container">
+
+  <text>Draw an English letter or digit here.</text>
+
+  <canvas class='canvas'
+    canvas-id='canvas' 
+    bindtouchstart='touchStart' 
+    bindtouchmove='touchMove' 
+    bindtouchend='touchEnd'
+    disable-scroll='{{true}}'
+  />
+
+  <view class='btnstrip'> 
+    <button loading="{{false}}" plain="{{false}}" disabled="{{false}}" bindtap="btnClear" class="btn">
+      Clear
+    </button>
+
+    <button type="primary" loading="{{false}}" plain="{{false}}" disabled="{{false}}" bindtap="btnSubmit" class="btn">
+      Submit
+    </button>
+  </view>
+
+  <view wx:if="{{fetched}}"> 
+
+    <view wx:for="{{labels}}">
+      <label> {{item}} : {{probs[index]}}</label>
+    </view>
+  
+  </view>
+
+</view>
