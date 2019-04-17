@@ -1,0 +1,10 @@
+<!--about.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <image bindtap="bindViewTap" class="userinfo-avatar" src="../../resources/avatar/avatar.png" mode="cover"></image>
+    <text class="userinfo-nickname">an App by Shuheng Liu</text>
+  </view>
+  <view class="usermotto">
+    <textarea class="user-motto">This app is written to provide a graphic user interface for the graduation design, recognition of handwritten English characters, of Shuheng Liu, a bachelor student at School of Automation, Chongqing University.</textarea>
+  </view>
+</view>

@@ -1,26 +1,34 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/about/about"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Wechat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "debug": true,
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "index",
-      "iconPath": "resources/icons/homepage.png",
-      "selectedIconPath": "resources/icons/homepage-selected.png"
-    }, {
-      "pagePath": "pages/logs/logs",
-      "text": "logs",
-      "iconPath": "resources/icons/logs.png",
-      "selectedIconPath": "resources/icons/logs-selected.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "App",
+        "iconPath": "resources/icons/homepage.png",
+        "selectedIconPath": "resources/icons/homepage-selected.png"
+      }, {
+        "pagePath": "pages/logs/logs",
+        "text": "Logs",
+        "iconPath": "resources/icons/logs.png",
+        "selectedIconPath": "resources/icons/logs-selected.png"
+      }, {
+        "pagePath": "pages/about/about",
+        "text": "About",
+        "iconPath": "resources/icons/profile.png",
+        "selectedIconPath": "resources/icons/profile-selected.png"
+      }
+    ]
   }
 }
