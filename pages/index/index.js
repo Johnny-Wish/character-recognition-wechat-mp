@@ -73,6 +73,7 @@ Page({
       context: this.context,
       probs: null,
       labels: null,
+      submitting: false,
     })
   },
 
@@ -88,6 +89,9 @@ Page({
         console.log("----toTempFileSuccesss----")
         console.log(res)
         let tempFilePath = res.tempFilePath
+
+        that.setData({submitting: true})
+
         wx.uploadFile({
           url: 'https://www.floydlabs.com/serve/wish1104/projects/character-recognition',
           filePath: tempFilePath,
@@ -103,11 +107,11 @@ Page({
           },
           fail(res) {
             console.log("upload failure")
-            console.log(res)
           },
           complete(res) {
             console.log("upload complete")
             console.log(res)
+            that.setData({submitting: false})
           }
         })
       },

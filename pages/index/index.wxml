@@ -21,19 +21,19 @@
   </view>
 
   <view class='btnstrip'> 
-    <button loading="{{false}}" plain="{{false}}" disabled="{{false}}" bindtap="btnHide" class="btn">
-      {{show? 'Hide Canvas' : 'Show Canavs'}}
+    <button type="secondary" loading="{{false}}" plain="{{false}}" disabled="{{false}}" bindtap="btnHide" class="btn hideBtn">
+      {{show? 'Hide Canvas' : 'Show Canvas'}}
     </button>
   </view>
 
 
   <view class='btnstrip'> 
-    <button type="secondary" loading="{{false}}" plain="{{false}}" disabled="{{false}}" bindtap="btnClear" class="btn">
+    <button type="secondary" loading="{{false}}" plain="{{false}}" disabled="{{false}}" bindtap="btnClear" class="btn clearBtn">
       Clear
     </button>
 
-    <button type="primary" loading="{{false}}" plain="{{false}}" disabled="{{false}}" bindtap="btnSubmit" class="btn">
-      Submit
+    <button type="primary" loading="{{false}}" plain="{{false}}" disabled="{{submitting}}" bindtap="btnSubmit" class="btn">
+      {{submitting? "Identifying..." : "Identify"}}
     </button>
   </view>
 
