@@ -1,18 +1,34 @@
 <!--index.wxml-->
-<view class="container">
+<view class="toplevel_container">
 
   <text>Draw an English letter or digit here.</text>
 
-  <canvas class='canvas'
+  <canvas wx:if="{{show}}"
+    class='canvas'
     canvas-id='canvas' 
     bindtouchstart='touchStart' 
     bindtouchmove='touchMove' 
     bindtouchend='touchEnd'
     disable-scroll='{{true}}'
   />
+  <view wx:else class="canvas_placeholder">
+    <label style=''>
+      The canvas is hidden.
+    </label>
+    <label>
+      Tap on "Show" to reveal it.
+    </label>
+  </view>
 
   <view class='btnstrip'> 
-    <button loading="{{false}}" plain="{{false}}" disabled="{{false}}" bindtap="btnClear" class="btn">
+    <button loading="{{false}}" plain="{{false}}" disabled="{{false}}" bindtap="btnHide" class="btn">
+      {{show? 'Hide Canvas' : 'Show Canavs'}}
+    </button>
+  </view>
+
+
+  <view class='btnstrip'> 
+    <button type="secondary" loading="{{false}}" plain="{{false}}" disabled="{{false}}" bindtap="btnClear" class="btn">
       Clear
     </button>
 

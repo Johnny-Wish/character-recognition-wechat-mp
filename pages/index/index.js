@@ -5,6 +5,7 @@ Page({
     labels: null,
     probs: null,
     fetched: false,
+    show: true,
   },
 
   onLoad: function (options) {
@@ -120,5 +121,10 @@ Page({
     }, this)
   },
 
-  
+  btnHide: function(){
+    this.setData({
+      show: !this.data.show
+    })
+  }
+
 })
